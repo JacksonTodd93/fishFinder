@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery.js"></script>
+    <script src="ACNH-Fish.js"></script>
+    <title>Fish Finder</title>
+  </head>
+  <body>
+    <script>
+  $(document).ready(function() {
+    var timelineNum = 0
+    var timelineNames = [];
+    var $body = $('body');
+    $body.html('');
+    var $heading = $('<h1></h1>');
+    $heading.html("<img src=\"images/logo.png\">").appendTo($body);
+    var $greetingText = $('<h1 id="greeting"></h1>')
+    var userTweet = $('<div></div>');
+    userTweet.html(`<div id="userTweet"><span id="welcome">Welecome to Twiddler! </span> <span id="welcome">Write a tweet:</span>
+    <form autocomplete="off">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="newUserTweet">Tweet:</label><br>
+        <textarea rows ="3" cols ="30" id="newUserTweet" name="newUserTweet"></textarea> <br>
+        <input type="button" id="sendTweetButton" value="Tweet It!">
+        <input type="reset" value="Clear">
+    </form></div>`)
+        userTweet.appendTo($body)
+    $greetingText.html("Here\'s the latest from users you follow:").appendTo($body);
+
+    var button = $('<div></div>')
+    button.html("<button class=\"button\">Fetch New Tweets</button>")
+    button.appendTo($body)
+    button.on('click', tweetDisplay);
+    var index = streams.home.length - 1;
+    while (index >= 0) {
+        var tweet = streams.home[index];
+        var $tweet = $('<div id="tweet"></div>');
+        var timestamp = 'Sent: ' + tweet.created_at;
+        timestamp = timestamp.slice(0, 6) + timestamp.slice(10, 27);
+        var amOrPm = parseInt(timestamp.slice(18, 20));
+        if (amOrPm >= 10 && amOrPm < 12) {
+            timestamp = '\n' + timestamp + ' A.M.'
+        } else if (amOrPm > 0 && amOrPm < 10) {
+            timestamp = '\n' + timestamp.slice(0, 18) + amOrPm + timestamp.slice(20) + ' A.M.'
+        } else if (amOrPm === 12) {
+            timestamp = '\n' + timestamp + ' P.M.'
+        } else if (amOrPm === 0) {
+            var midnightAdjustment = amOrPm + 12;
+            timestamp = '\n' + timestamp.slice(0, 18) + midnightAdjustment + timestamp.slice(20) + ' A.M.'
+        } else {
+            var pmAdjustment = amOrPm - 12;
+            timestamp = '\n' + timestamp.slice(0, 18) + pmAdjustment + timestamp.slice(20) + ' P.M.';
+        }
+        var $timestamp = $('<h5></h5>');
+        var $userPage = $('<span id=\'user\'></span>')
+        var $tweetMsg = $('<span id=\'message\'></span>')
+
+        $userPage.text('@' + tweet.user);
+        $userPage.appendTo($tweet);
+        $tweetMsg.text(': ' + tweet.message);
+        $tweetMsg.appendTo($tweet)
+        $timestamp.text(timestamp)
+        $tweet.appendTo($body);
+        $timestamp.appendTo($tweet)
+        index -= 1;
+
+    }
+    $(document).on('click','#user', function(){
+            event.preventDefault();
+            var screenName = $(this).text().slice(1);
+            timelineDisplay(screenName)
+        });
+    $(document).on('click','#sendTweetButton', function(){
+        event.preventDefault();
+        var tweet = {}
+        var userTweetName = $.trim($("#username").val())
+        console.log(userTweetName.length === 0)
+        var userTweetMessage = $.trim($("#newUserTweet").val())
+        console.log(userTweetMessage.length === 0)
+        if (userTweetName.length === 0 || userTweetMessage.length === 0){
+            errorDisplay();
+        } else{
+        tweet.user = userTweetName;
+        tweet.message = userTweetMessage
+        tweet.created_at = new Date();
+        if (streams.users[tweet.user] === undefined){
+            streams.users[tweet.user] = [];
+        }
+        addTweet(tweet)
+        tweetDisplay()
+    }
+    });
+    $(document).on('click','#sendTweetButtonFromTL', function(){
+        event.preventDefault();
+        var tweet = {}
+        var userTweetName = $.trim($("#username").val())
+        console.log(userTweetName.length)
+        var userTweetMessage = $.trim($("#newUserTweet").val())
+        console.log(userTweetMessage.length)
+        if (userTweetName.length === 0 || userTweetMessage.length === 0 ){
+            timelineErrorDisplay(timelineNames[timelineNum - 1])
+        } else{
+        tweet.user = userTweetName;
+        tweet.message = userTweetMessage
+        tweet.created_at = new Date();
+        if (streams.users[tweet.user] === undefined){
+            streams.users[tweet.user] = [];
+        }
+        addTweet(tweet)
+        timelineDisplay(timelineNames[timelineNum-1])
+    }
+    });
+
+    function errorDisplay(){
+        var index = streams.home.length - 1;
+        var $body = $('body');
+    $body.html('');
+    var $heading = $('<h1></h1>');
+    $heading.html("<img src=\"images/logo.png\">").appendTo($body);
+    var $greetingText = $('<h1 id="greeting"></h1>')
+    var userTweet = $('<div></div>');
+    userTweet.html(`<div id="userTweet"><span id="welcome">Welecome to Twiddler! </span> <span id="welcome">Write a tweet:</span>
+    <form autocomplete="off">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="newUserTweet">Tweet:</label><br>
+        <textarea rows ="3" cols ="30" id="newUserTweet" name="newUserTweet"></textarea> <br>
+        <input type="button" id="sendTweetButton" value="Tweet It!">
+        <input type="reset" value="Clear">
+    </form><span id="error">Error - tweet not sent.</span> <br> <span id="error">Please fill out both forms.</span></div>`)
+        userTweet.appendTo($body)
+    $greetingText.html("Here\'s the latest from users you follow:").appendTo($body);
+        var button = $('<div></div>')
+        button.html("<button class=\"button\">Fetch New Tweets</button>")
+        var $greetingText = $('<h1 id="greeting"></h1>')
+        button.appendTo($body)
+        button.on('click', tweetDisplay);
+        while (index >= 0) {
+            var tweetCount = 0;
+            var tweet = streams.home[index];
+            var $tweet = $('<div id="tweet"></div>');
+            var timestamp = 'Sent: ' + tweet.created_at;
+            timestamp = timestamp.slice(0, 6) + timestamp.slice(10, 27);
+            var amOrPm = parseInt(timestamp.slice(18, 20));
+            if (amOrPm >= 10 && amOrPm < 12) {
+                timestamp = '\n' + timestamp + ' A.M.'
+            } else if (amOrPm > 0 && amOrPm < 10) {
+                timestamp = '\n' + timestamp.slice(0, 18) + amOrPm + timestamp.slice(20) + ' A.M.'
+            } else if (amOrPm === 12) {
+                timestamp = '\n' + timestamp + ' P.M.'
+            } else if (amOrPm === 0) {
+                var midnightAdjustment = amOrPm + 12;
+                timestamp = '\n' + timestamp.slice(0, 18) + midnightAdjustment + timestamp.slice(20) + ' A.M.'
+            } else {
+                var pmAdjustment = amOrPm - 12;
+                timestamp = '\n' + timestamp.slice(0, 18) + pmAdjustment + timestamp.slice(20) + ' P.M.';
+            }
+            var $timestamp = $('<h5></h5>');
+            var $userPage = $('<span id=\'user\'></span>')
+            var $tweetMsg = $('<span id=\'message\'></span>')
+            $userPage.text('@' + tweet.user);
+            $userPage.appendTo($tweet);
+            $tweetMsg.text(': ' + tweet.message);
+            $tweetMsg.appendTo($tweet)
+            $timestamp.text(timestamp)
+            $tweet.appendTo($body);
+            $timestamp.appendTo($tweet)
+            index -= 1;
+        }
+
+    }
+
+    function tweetDisplay() {
+        var index = streams.home.length - 1;
+        var $body = $('body');
+    $body.html('');
+    var $heading = $('<h1></h1>');
+    $heading.html("<img src=\"images/logo.png\">").appendTo($body);
+    var $greetingText = $('<h1 id="greeting"></h1>')
+    var userTweet = $('<div></div>');
+    userTweet.html(`<div id="userTweet"><span id="welcome">Welecome to Twiddler! </span> <span id="welcome">Write a tweet:</span>
+    <form autocomplete="off">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="newUserTweet">Tweet:</label><br>
+        <textarea rows ="3" cols ="30" id="newUserTweet" name="newUserTweet"></textarea> <br>
+        <input type="button" id="sendTweetButton" value="Tweet It!">
+        <input type="reset" value="Clear">
+    </form></div>`)
+        userTweet.appendTo($body)
+    $greetingText.html("Here\'s the latest from users you follow:").appendTo($body);
+        var button = $('<div></div>')
+        button.html("<button class=\"button\">Fetch New Tweets</button>")
+        var $greetingText = $('<h1 id="greeting"></h1>')
+        button.appendTo($body)
+        button.on('click', tweetDisplay);
+        while (index >= 0) {
+            var tweetCount = 0;
+            var tweet = streams.home[index];
+            var $tweet = $('<div id="tweet"></div>');
+            var timestamp = 'Sent: ' + tweet.created_at;
+            timestamp = timestamp.slice(0, 6) + timestamp.slice(10, 27);
+            var amOrPm = parseInt(timestamp.slice(18, 20));
+            if (amOrPm >= 10 && amOrPm < 12) {
+                timestamp = '\n' + timestamp + ' A.M.'
+            } else if (amOrPm > 0 && amOrPm < 10) {
+                timestamp = '\n' + timestamp.slice(0, 18) + amOrPm + timestamp.slice(20) + ' A.M.'
+            } else if (amOrPm === 12) {
+                timestamp = '\n' + timestamp + ' P.M.'
+            } else if (amOrPm === 0) {
+                var midnightAdjustment = amOrPm + 12;
+                timestamp = '\n' + timestamp.slice(0, 18) + midnightAdjustment + timestamp.slice(20) + ' A.M.'
+            } else {
+                var pmAdjustment = amOrPm - 12;
+                timestamp = '\n' + timestamp.slice(0, 18) + pmAdjustment + timestamp.slice(20) + ' P.M.';
+            }
+            var $timestamp = $('<h5></h5>');
+            var $userPage = $('<span id=\'user\'></span>')
+            var $tweetMsg = $('<span id=\'message\'></span>')
+            $userPage.text('@' + tweet.user);
+            $userPage.appendTo($tweet);
+            $tweetMsg.text(': ' + tweet.message);
+            $tweetMsg.appendTo($tweet)
+            $timestamp.text(timestamp)
+            $tweet.appendTo($body);
+            $timestamp.appendTo($tweet)
+            index -= 1;
+        }
+
+    }
+
+    function timelineDisplay(screenName) {
+        timelineNum = timelineNum + 1;
+        timelineNames.push(screenName)
+        var index = streams.users[screenName].length - 1;
+        $body.html('');
+        var $heading = $('<h1></h1>');
+        $heading.html("<img src=\"images/logo.png\">").appendTo($body);
+        var button = $('<div></div>')
+        button.html("<button class=\"button\" id=\"goback\">Back to main  </button>")
+        var $greetingText = $('<h1 id="greeting"></h1>')
+        var userTweet = $('<div></div>');
+    userTweet.html(`<div id="userTweet"><span id="welcome">Welecome to Twiddler! </span> <span id="welcome">Write a tweet:</span>
+    <form autocomplete="off">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="newUserTweet">Tweet:</label><br>
+        <textarea rows ="3" cols ="30" id="newUserTweet" name="newUserTweet"></textarea> <br>
+        <input type="button" id="sendTweetButtonFromTL" value="Tweet It!">
+        <input type="reset" value="Clear">
+    </form></div>`)
+        userTweet.appendTo($body)
+        $greetingText.text("You're viewing @" + screenName + "\'s timeline.").appendTo($body);
+        button.appendTo($body)
+        button.on('click', tweetDisplay);
+        while (index >= 0) {
+            var tweet = streams.users[screenName][index];
+            var $tweet = $('<div id="tweet"></div>');
+            var timestamp = 'Sent: ' + tweet.created_at;
+            timestamp = timestamp.slice(0, 6) + timestamp.slice(10, 27);
+            var amOrPm = parseInt(timestamp.slice(18, 20));
+            if (amOrPm >= 10 && amOrPm < 12) {
+                timestamp = '\n' + timestamp + ' A.M.'
+            } else if (amOrPm > 0 && amOrPm < 10) {
+                timestamp = '\n' + timestamp.slice(0, 18) + amOrPm + timestamp.slice(20) + ' A.M.'
+            } else if (amOrPm === 12) {
+                timestamp = '\n' + timestamp + ' P.M.'
+            } else if (amOrPm === 0) {
+                var midnightAdjustment = amOrPm + 12;
+                timestamp = '\n' + timestamp.slice(0, 18) + midnightAdjustment + timestamp.slice(20) + ' A.M.'
+            } else {
+                var pmAdjustment = amOrPm - 12;
+                timestamp = '\n' + timestamp.slice(0, 18) + pmAdjustment + timestamp.slice(20) + ' P.M.';
+            }
+            var $timestamp = $('<h5></h5>');
+            var $userPage = $('<span id=\'user\'></span>')
+            var $tweetMsg = $('<span id=\'message\'></span>')
+            $userPage.text('@' + tweet.user);
+            $userPage.appendTo($tweet);
+            $tweetMsg.text(': ' + tweet.message);
+            $tweetMsg.appendTo($tweet)
+            $timestamp.text(timestamp)
+            $tweet.appendTo($body);
+            $timestamp.appendTo($tweet)
+            index -= 1;
+        }
+    }
+    function timelineErrorDisplay(screenName) {
+        timelineNum = timelineNum + 1;
+        timelineNames.push(screenName)
+        var index = streams.users[screenName].length - 1;
+        $body.html('');
+        var $heading = $('<h1></h1>');
+        $heading.html("<img src=\"images/logo.png\">").appendTo($body);
+        var button = $('<div></div>')
+        button.html("<button class=\"button\" id=\"goback\">Back to main  </button>")
+        var $greetingText = $('<h1 id="greeting"></h1>')
+        var userTweet = $('<div></div>');
+    userTweet.html(`<div id="userTweet"><span id="welcome">Welecome to Twiddler! </span> <span id="welcome">Write a tweet:</span>
+    <form autocomplete="off">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="newUserTweet">Tweet:</label><br>
+        <textarea rows ="3" cols ="30" id="newUserTweet" name="newUserTweet"></textarea> <br>
+        <input type="button" id="sendTweetButtonFromTL" value="Tweet It!">
+        <input type="reset" value="Clear">
+    </form><span id="error">Error - tweet not sent.</span> <br> <span id="error">Please fill out both forms.</span></div>`)
+        userTweet.appendTo($body)
+        $greetingText.text("You're viewing @" + screenName + "\'s timeline.").appendTo($body);
+        button.appendTo($body)
+        button.on('click', tweetDisplay);
+        while (index >= 0) {
+            var tweet = streams.users[screenName][index];
+            var $tweet = $('<div id="tweet"></div>');
+            var timestamp = 'Sent: ' + tweet.created_at;
+            timestamp = timestamp.slice(0, 6) + timestamp.slice(10, 27);
+            var amOrPm = parseInt(timestamp.slice(18, 20));
+            if (amOrPm >= 10 && amOrPm < 12) {
+                timestamp = '\n' + timestamp + ' A.M.'
+            } else if (amOrPm > 0 && amOrPm < 10) {
+                timestamp = '\n' + timestamp.slice(0, 18) + amOrPm + timestamp.slice(20) + ' A.M.'
+            } else if (amOrPm === 12) {
+                timestamp = '\n' + timestamp + ' P.M.'
+            } else if (amOrPm === 0) {
+                var midnightAdjustment = amOrPm + 12;
+                timestamp = '\n' + timestamp.slice(0, 18) + midnightAdjustment + timestamp.slice(20) + ' A.M.'
+            } else {
+                var pmAdjustment = amOrPm - 12;
+                timestamp = '\n' + timestamp.slice(0, 18) + pmAdjustment + timestamp.slice(20) + ' P.M.';
+            }
+            var $timestamp = $('<h5></h5>');
+            var $userPage = $('<span id=\'user\'></span>')
+            var $tweetMsg = $('<span id=\'message\'></span>')
+            $userPage.text('@' + tweet.user);
+            $userPage.appendTo($tweet);
+            $tweetMsg.text(': ' + tweet.message);
+            $tweetMsg.appendTo($tweet)
+            $timestamp.text(timestamp)
+            $tweet.appendTo($body);
+            $timestamp.appendTo($tweet)
+            index -= 1;
+        }
+    }
+});
+    </script>
+  </body>
+</html>
