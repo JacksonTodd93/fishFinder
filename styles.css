@@ -1,0 +1,118 @@
+      h1 {
+        margin: 60px;
+      }
+      #greeting{
+        color: white;
+        background-color: rgb(164,204,255);
+        border: 3px solid navy;
+        border-radius: 10px;
+        width: 450px;
+        padding: 15px;
+        text-align: center;
+      }
+      #fish {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+         background-color: rgb(164, 204, 255);
+         border-radius: 15px;
+         width: 320px;
+         padding: 9px;
+         border: 2px solid navy ;
+         margin-left: 120px;
+         margin-bottom: 20px;
+         white-space: pre-line;
+      }
+      form{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 9px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+      }
+      #userTweet{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: rgb(164, 204, 255);
+        border-radius: 15px;
+        border: 3px solid navy ;
+        margin-left: 130px;
+        margin-bottom: 10px;
+        padding: 8px;
+        width: 320px;
+        text-align: center;
+      }
+      #error{
+        font-weight: normal;
+        color: red;
+        padding: 5px;
+        margin-left: 25px;
+        margin-bottom: 10px;
+      }
+      span#welcome{
+        color:white;
+        font-weight: bold;
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+      }
+      button{
+        cursor: pointer;
+      }
+     .button {
+        display: inline-block;
+        padding: 15px 15px;
+        font-size: 24px;
+        margin-left: 230px;
+        margin-bottom: 50px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #2235a1;
+        border: none;
+        border-radius: 9px;
+        box-shadow: 0 9px rgba(204, 204, 204, 0.89);
+      }
+      .button#goback{
+        margin-left: 190px;
+      }
+      .button:hover {background-color: #8f2aa3}
+
+      .button:active {
+        background-color: #661eb8;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+      #user{
+        cursor: pointer;
+      }
+      p {
+        color: darkgray;
+        margin-left: 100px
+      }
+      h1{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        width: 800px;
+        margin-left: 50px;
+      }
+      h5 {
+        font-size: 15px;
+        color: #3e4444;
+        margin: 0px;
+        padding: 0px;
+        font-weight: normal;
+      }
+      body{
+        background-color: rgb(151, 215, 239);
+        margin-right: 800px;
+      }
+      aside {
+        float: right;
+        padding-left: 15px;
+        margin-left: 15px;
+      }
+      span#user{
+        color: blue;
+        text-decoration: underline;
+      }
+      span {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }

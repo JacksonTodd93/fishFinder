@@ -633,6 +633,12 @@ fishFinder = function(fish){
     'location': null,
     'size': null
   };
+  var CommonValuable = {
+    'name': null,
+    'value': 0,
+    'location': null,
+    'size': null
+  };
   var rightNow = new Date().toString();
   var currentMonth = rightNow.slice(4,7);
   var currentHour = parseInt(rightNow.slice(16, 18));
@@ -663,5 +669,5 @@ fishFinder = function(fish){
         }
       }
     }
-    return 'The most valuable fish currently available is ' + valuable['name'] + ' with a value of ' + valuable['value'] + ' bells. Its location is ' + valuable['location'] + ' and its shadow size is ' + valuable['size'] + '.'
+    return 'The most valuable fish currently available is the ' + valuable['name'] + ' with a value of ' + valuable['value'].toLocaleString() + ' bells. Its location is ' + valuable['location'] + ' and its shadow size is ' + valuable['size'] + '.'
 }
