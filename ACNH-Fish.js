@@ -5,7 +5,8 @@ var fish = [
 "value": 900,
 "start time": 0,
 "end time": 0,
-"months": ['Nov', 'Dec', 'Jan', 'Mar']
+"months": ['Nov', 'Dec', 'Jan', 'Mar'],
+"rare": false
 },
 {"name": 'Pale Chub',
 "location": 'River',
@@ -13,7 +14,8 @@ var fish = [
 "value": 160,
 "start time": 9,
 "end time": 16,
-"months": ['Year-round']
+"months": ['Year-round'],
+"rare": false
 },
 {"name": 'Crucian Carp',
 "location": 'River',
@@ -21,7 +23,8 @@ var fish = [
 "value": 160,
 "start time": 0,
 "end time": 0,
-"months": ['Year-round']
+"months": ['Year-round'],
+"rare": false
 },
 {"name": 'Dace',
 "location": 'River',
@@ -29,7 +32,8 @@ var fish = [
 "value": 240,
 "start time": 16,
 "end time": 9,
-"months": ['Year-round']
+"months": ['Year-round'],
+"rare": false
 },
 {"name": 'Carp',
 "location": 'pond',
@@ -37,7 +41,8 @@ var fish = [
 "value": 300,
 "start time": 0,
 "end time": 0,
-"months": ['Year-round']
+"months": ['Year-round'],
+"rare": false
 },
 {"name": 'Koi',
 "location": 'pond',
@@ -45,7 +50,8 @@ var fish = [
 "value": 4000,
 "start time": 16,
 "end time": 9,
-"months": ['Year-round']
+"months": ['Year-round'],
+"rare": true
 },
 {"name": 'Goldfish',
 "location": 'pond',
@@ -53,7 +59,8 @@ var fish = [
 "value": 1300,
 "start time": 0,
 "end time": 0,
-"months": ['Year-round']
+"months": ['Year-round'],
+"rare": false
 },
 {"name": 'Pop-eyed Goldfish',
 "location": 'pond',
@@ -61,7 +68,8 @@ var fish = [
 "value": 1300,
 "start time": 9,
 "end time": 16,
-"months": ['Year-round']
+"months": ['Year-round'],
+"rare": false
 },
 {"name": 'Ranchu Goldfish',
 "location": 'pond',
@@ -69,7 +77,8 @@ var fish = [
 "value": 4500,
 "start time": 9,
 "end time": 16,
-"months": ['Year-round']
+"months": ['Year-round'],
+"rare": true
 },
 {"name": 'Killifish',
 "location": 'pond',
@@ -77,7 +86,8 @@ var fish = [
 "value": 300,
 "start time": 0,
 "end time": 0,
-"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug']
+"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug'],
+"rare": false
 },
 {"name": 'Crawfish',
 "location": 'pond',
@@ -85,7 +95,8 @@ var fish = [
 "value": 200,
 "start time": 0,
 "end time": 0,
-"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
+"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+"rare": false
 },
 {"name": 'Soft-shelled Turtle',
 "location": 'river',
@@ -93,7 +104,8 @@ var fish = [
 "value": 3750,
 "start time": 16,
 "end time": 9,
-"months": ['Aug', 'Sep']
+"months": ['Aug', 'Sep'],
+"rare": false
 },
 {"name": 'Snapping Turtle',
 "location": 'river',
@@ -101,7 +113,8 @@ var fish = [
 "value": 5000,
 "start time": 21,
 "end time": 4,
-"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct']
+"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+"rare": false
 },
 {"name": 'Tadpole',
 "location": 'pond',
@@ -109,7 +122,8 @@ var fish = [
 "value": 100,
 "start time": 0,
 "end time": 0,
-"months": ['Mar', 'Apr', 'May', 'Jun', 'Jul']
+"months": ['Mar', 'Apr', 'May', 'Jun', 'Jul'],
+"rare": false
 },
 {"name": 'Frog',
 "location": 'pond',
@@ -117,7 +131,8 @@ var fish = [
 "value": 120,
 "start time": 0,
 "end time": 0,
-"months": ['May', 'Jun', 'Jul', 'Aug']
+"months": ['May', 'Jun', 'Jul', 'Aug'],
+"rare": false
 },
 {"name": 'Freshwater Goby',
 "location": 'river',
@@ -125,7 +140,8 @@ var fish = [
 "value": 400,
 "start time": 16,
 "end time": 9,
-"months": ['Year-round']
+"months": ['Year-round'],
+"rare": false
 },
 {"name": 'Loach',
 "location": 'river',
@@ -133,7 +149,8 @@ var fish = [
 "value": 400,
 "start time": 0,
 "end time": 0,
-"months": ['Mar', 'Apr', 'May']
+"months": ['Mar', 'Apr', 'May'],
+"rare": false
 },
 {"name": 'Catfish',
 "location": 'pond',
@@ -141,7 +158,8 @@ var fish = [
 "value": 800,
 "start time": 16,
 "end time": 9,
-"months": ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct']
+"months": ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+"rare": false
 },
 {"name": 'Giant Snakehead',
 "location": 'pond',
@@ -149,7 +167,8 @@ var fish = [
 "value": 5500,
 "start time": 9,
 "end time": 16,
-"months": ['Jun', 'Jul', 'Aug']
+"months": ['Jun', 'Jul', 'Aug'],
+"rare": true
 },
 {"name": 'Bluegill',
 "location": 'river',
@@ -157,7 +176,8 @@ var fish = [
 "value": 180,
 "start time": 9,
 "end time": 16,
-"months": ['Year-round']
+"months": ['Year-round'],
+"rare": false
 },
 {"name": 'Yellow Perch',
 "location": 'river',
@@ -165,7 +185,8 @@ var fish = [
 "value": 300,
 "start time": 0,
 "end time": 0,
-"months": ['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar']
+"months": ['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
+"rare": false
 },
 {"name": 'Black Bass',
 "location": 'river',
@@ -173,7 +194,8 @@ var fish = [
 "value": 400,
 "start time": 0,
 "end time": 0,
-"months": ['Year-round']
+"months": ['Year-round'],
+"rare": false
 },
 {"name": 'Tilapia',
 "location": 'river',
@@ -181,7 +203,8 @@ var fish = [
 "value": 800,
 "start time": 0,
 "end time": 0,
-"months": ['Jun', 'Jul', 'Aug', 'Sep', 'Oct']
+"months": ['Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+"rare": false
 },
 {"name": 'Pike',
 "location": 'river',
@@ -197,7 +220,8 @@ var fish = [
 "value": 500,
 "start time": 0,
 "end time": 0,
-"months": ['Dec', 'Jan', 'Feb']
+"months": ['Dec', 'Jan', 'Feb'],
+"rare": false
 },
 {"name": 'Sweetfish',
 "location": 'river',
@@ -205,7 +229,8 @@ var fish = [
 "value": 900,
 "start time": 0,
 "end time": 0,
-"months": ['Jul', 'Aug', 'Sep']
+"months": ['Jul', 'Aug', 'Sep'],
+"rare": false
 },
 {"name": 'Cherry Salmon',
 "location": 'river clifftop',
@@ -213,7 +238,8 @@ var fish = [
 "value": 1000,
 "start time": 16,
 "end time": 9,
-"months": ['Mar', 'Apr', 'May', 'Jun', 'Sep', 'Oct', 'Nov']
+"months": ['Mar', 'Apr', 'May', 'Jun', 'Sep', 'Oct', 'Nov'],
+"rare": false
 },
 {"name": 'Char',
 "location": 'river clifftop',
@@ -221,7 +247,8 @@ var fish = [
 "value": 3800,
 "start time": 16,
 "end time": 9,
-"months": ['Mar', 'Apr', 'May', 'Jun', 'Sep', 'Oct', 'Nov']
+"months": ['Mar', 'Apr', 'May', 'Jun', 'Sep', 'Oct', 'Nov'],
+"rare": false
 },
 {"name": 'Golden Trout',
 "location": 'river clifftop',
@@ -237,7 +264,8 @@ var fish = [
 "value": 15000,
 "start time": 16,
 "end time": 9,
-"months": ['Dec', 'Jan', 'Feb', 'Mar']
+"months": ['Dec', 'Jan', 'Feb', 'Mar'],
+"rare": true
 },
 {"name": 'Salmon',
 "location": 'river mouth',
@@ -245,7 +273,8 @@ var fish = [
 "value": 700,
 "start time": 0,
 "end time": 0,
-"months": ['Sep']
+"months": ['Sep'],
+"rare": false
 },
 {"name": 'King Salmon',
 "location": 'river mouth',
@@ -253,7 +282,8 @@ var fish = [
 "value": 1800,
 "start time": 0,
 "end time": 0,
-"months": ['Sep']
+"months": ['Sep'],
+"rare": false
 },
 {"name": 'Mitten Crab',
 "location": 'river',
@@ -261,7 +291,8 @@ var fish = [
 "value": 2000,
 "start time": 16,
 "end time": 9,
-"months": ['Sep', 'Oct', 'Nov']
+"months": ['Sep', 'Oct', 'Nov'],
+"rare": false
 },
 {"name": 'Guppy',
 "location": 'river',
@@ -269,7 +300,8 @@ var fish = [
 "value": 1300,
 "start time": 9,
 "end time": 16,
-"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov']
+"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+"rare": false
 },
 {"name": 'Nibble Fish',
 "location": 'river',
@@ -277,7 +309,8 @@ var fish = [
 "value": 1500,
 "start time": 9,
 "end time": 16,
-"months": ['May', 'Jun', 'Jul', 'Aug', 'Sep']
+"months": ['May', 'Jun', 'Jul', 'Aug', 'Sep'],
+"rare": false
 },
 {"name": 'Angelfish',
 "location": 'river',
@@ -285,7 +318,8 @@ var fish = [
 "value": 3000,
 "start time": 16,
 "end time": 9,
-"months": ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct']
+"months": ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+"rare": false
 },
 {"name": 'Betta',
 "location": 'river',
@@ -293,7 +327,8 @@ var fish = [
 "value": 2500,
 "start time": 9,
 "end time": 16,
-"months": ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct']
+"months": ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+"rare": true
 },
 {"name": 'Neon Tetra',
 "location": 'river',
@@ -301,7 +336,8 @@ var fish = [
 "value": 500,
 "start time": 9,
 "end time": 16,
-"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov']
+"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+"rare": false
 },
 {"name": 'Rainbowfish',
 "location": 'river',
@@ -309,7 +345,8 @@ var fish = [
 "value": 800,
 "start time": 9,
 "end time": 16,
-"months": ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct']
+"months": ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+"rare": false
 },
 {"name": 'Piranha',
 "location": 'river',
@@ -317,7 +354,8 @@ var fish = [
 "value": 2500,
 "start time": 9,
 "end time": 16,
-"months": ['Jun', 'Jul', 'Aug', 'Sep']
+"months": ['Jun', 'Jul', 'Aug', 'Sep'],
+"rare": false
 },
 {"name": 'Arowana',
 "location": 'river',
@@ -325,7 +363,8 @@ var fish = [
 "value": 10000,
 "start time": 16,
 "end time": 9,
-"months": ['Jun', 'Jul', 'Aug', 'Sep']
+"months": ['Jun', 'Jul', 'Aug', 'Sep'],
+"rare": true
 },
 {"name": 'Dorado',
 "location": 'river',
@@ -333,7 +372,8 @@ var fish = [
 "value": 15000,
 "start time": 4,
 "end time": 21,
-"months": ['Jun', 'Jul', 'Aug', 'Sep']
+"months": ['Jun', 'Jul', 'Aug', 'Sep'],
+"rare": true
 },
 {"name": 'Gar',
 "location": 'pond',
@@ -341,7 +381,8 @@ var fish = [
 "value": 6000,
 "start time": 16,
 "end time": 9,
-"months": ['Jun', 'Jul', 'Aug', 'Sep']
+"months": ['Jun', 'Jul', 'Aug', 'Sep'],
+"rare": true
 },
 {"name": 'Arapaima',
 "location": 'river',
@@ -349,7 +390,8 @@ var fish = [
 "value": 10000,
 "start time": 16,
 "end time": 9,
-"months": ['Jun', 'Jul', 'Aug', 'Sep']
+"months": ['Jun', 'Jul', 'Aug', 'Sep'],
+"rare": true
 },
 {"name": 'Saddled Bichir',
 "location": 'river',
@@ -357,7 +399,8 @@ var fish = [
 "value": 4000,
 "start time": 21,
 "end time": 4,
-"months": ['Jun', 'Jul', 'Aug', 'Sep']
+"months": ['Jun', 'Jul', 'Aug', 'Sep'],
+"rare": true
 },
 {"name": 'Sturgeon',
 "location": 'river mouth',
@@ -365,7 +408,8 @@ var fish = [
 "value": 10000,
 "start time": 0,
 "end time": 0,
-"months": ['Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar']
+"months": ['Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
+"rare": true
 },
 {"name": 'Sea Butterfly',
 "location": 'sea',
@@ -373,7 +417,8 @@ var fish = [
 "value": 1000,
 "start time": 0,
 "end time": 0,
-"months": ['Dec', 'Jan', 'Feb', 'Mar']
+"months": ['Dec', 'Jan', 'Feb', 'Mar'],
+"rare": false
 },
 {"name": 'Sea Horse',
 "location": 'sea',
@@ -381,7 +426,8 @@ var fish = [
 "value": 1100,
 "start time": 0,
 "end time": 0,
-"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov']
+"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+"rare": false
 },
 {"name": 'Clown Fish',
 "location": 'sea',
@@ -389,7 +435,8 @@ var fish = [
 "value": 650,
 "start time": 0,
 "end time": 0,
-"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
+"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+"rare": false
 },
 {"name": 'Surgeonfish',
 "location": 'sea',
@@ -397,7 +444,8 @@ var fish = [
 "value": 1000,
 "start time": 0,
 "end time": 0,
-"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
+"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+"rare": false
 },
 {"name": 'Butterfly Fish',
 "location": 'sea',
@@ -405,7 +453,8 @@ var fish = [
 "value": 1000,
 "start time": 0,
 "end time": 0,
-"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
+"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+"rare": false
 },
 {"name": 'Napoleonfish',
 "location": 'sea',
@@ -413,7 +462,8 @@ var fish = [
 "value": 10000,
 "start time": 4,
 "end time": 21,
-"months": ['Jul', 'Aug']
+"months": ['Jul', 'Aug'],
+"rare": true
 },
 {"name": 'Zebra Turkeyfish',
 "location": 'sea',
@@ -421,7 +471,8 @@ var fish = [
 "value": 500,
 "start time": 0,
 "end time": 0,
-"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov']
+"months": ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+"rare": false
 },
 {"name": 'Blowfish',
 "location": 'sea',
@@ -429,7 +480,8 @@ var fish = [
 "value": 5000,
 "start time": 21,
 "end time": 4,
-"months": ['Nov', 'Dec', 'Jan', 'Feb']
+"months": ['Nov', 'Dec', 'Jan', 'Feb'],
+"rare": false
 },
 {"name": 'Puffer Fish',
 "location": 'sea',
@@ -437,7 +489,8 @@ var fish = [
 "value": 250,
 "start time": 0,
 "end time": 0,
-"months": ['Jul', 'Aug', 'Sep']
+"months": ['Jul', 'Aug', 'Sep'],
+"rare": false
 },
 {"name": 'Anchovy',
 "location": 'sea',
@@ -445,7 +498,8 @@ var fish = [
 "value": 200,
 "start time": 4,
 "end time": 21,
-"months": ['Year-round']
+"months": ['Year-round'],
+"rare": false
 },
 {"name": 'Horse Mackerel',
 "location": 'sea',
@@ -453,7 +507,8 @@ var fish = [
 "value": 150,
 "start time": 0,
 "end time": 0,
-"months": ['Year-round']
+"months": ['Year-round'],
+"rare": false
 },
 {"name": 'Barred Knifejaw',
 "location": 'sea',
@@ -461,7 +516,8 @@ var fish = [
 "value": 5000,
 "start time": 0,
 "end time": 0,
-"months": ['Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov']
+"months": ['Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+"rare": false
 },
 {"name": 'Sea Bass',
 "location": 'sea',
@@ -469,7 +525,8 @@ var fish = [
 "value": 400,
 "start time": 0,
 "end time": 0,
-"months": ['Year-round']
+"months": ['Year-round'],
+"rare": false
 },
 {"name": 'Red Snapper',
 "location": 'sea',
@@ -477,7 +534,8 @@ var fish = [
 "value": 3000,
 "start time": 0,
 "end time": 0,
-"months": ['Year-round']
+"months": ['Year-round'],
+"rare": false
 },
 {"name": 'Dab',
 "location": 'sea',
@@ -485,7 +543,8 @@ var fish = [
 "value": 300,
 "start time": 0,
 "end time": 0,
-"months": ['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr']
+"months": ['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr'],
+"rare": false
 },
 {"name": 'Squid',
 "location": 'sea',
@@ -493,7 +552,8 @@ var fish = [
 "value": 500,
 "start time": 0,
 "end time": 0,
-"months": ['Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug']
+"months": ['Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+"rare": false
 },
 {"name": 'Moray Eel',
 "location": 'sea',
@@ -501,7 +561,8 @@ var fish = [
 "value": 2000,
 "start time": 0,
 "end time": 0,
-"months": ['Aug', 'Sep', 'Oct']
+"months": ['Aug', 'Sep', 'Oct'],
+"rare": false
 },
 {"name": 'Ribbon Eel',
 "location": 'sea',
@@ -509,7 +570,8 @@ var fish = [
 "value": 600,
 "start time": 0,
 "end time": 0,
-"months": ['Jun', 'Jul', 'Aug', 'Sep', 'Oct']
+"months": ['Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+"rare": false
 },
 {"name": 'Tuna',
 "location": 'pier',
@@ -517,7 +579,8 @@ var fish = [
 "value": 7000,
 "start time": 0,
 "end time": 0,
-"months": ['Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr']
+"months": ['Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr'],
+"rare": true
 },
 {"name": 'Blue Marlin',
 "location": 'pier',
@@ -525,7 +588,8 @@ var fish = [
 "value": 10000,
 "start time": 0,
 "end time": 0,
-"months": ['Jul', 'Aug', 'Sep', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr']
+"months": ['Jul', 'Aug', 'Sep', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr'],
+"rare": true
 },
 {"name": 'Giant Trevally',
 "location": 'pier',
@@ -533,7 +597,8 @@ var fish = [
 "value": 4500,
 "start time": 0,
 "end time": 0,
-"months": ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct']
+"months": ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+"rare": true
 },
 {"name": 'Mahi-mahi',
 "location": 'pier',
@@ -541,7 +606,8 @@ var fish = [
 "value": 6000,
 "start time": 0,
 "end time": 0,
-"months": ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct']
+"months": ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+"rare": true
 },
 {"name": 'Ocean Sunfish',
 "location": 'sea',
@@ -549,7 +615,8 @@ var fish = [
 "value": 4000,
 "start time": 4,
 "end time": 21,
-"months": ['Jul', 'Aug', 'Sep']
+"months": ['Jul', 'Aug', 'Sep'],
+"rare": false
 },
 {"name": 'Ray',
 "location": 'sea',
@@ -557,7 +624,8 @@ var fish = [
 "value": 3000,
 "start time": 4,
 "end time": 21,
-"months": ['Aug', 'Sep', 'Oct', 'Nov']
+"months": ['Aug', 'Sep', 'Oct', 'Nov'],
+"rare": false
 },
 {"name": 'Saw Shark',
 "location": 'sea',
@@ -565,7 +633,8 @@ var fish = [
 "value": 12000,
 "start time": 16,
 "end time": 9,
-"months": ['Jun', 'Jul', 'Aug', 'Sep']
+"months": ['Jun', 'Jul', 'Aug', 'Sep'],
+"rare": true
 },
 {"name": 'Hammerhead Shark',
 "location": 'sea',
@@ -573,7 +642,8 @@ var fish = [
 "value": 8000,
 "start time": 16,
 "end time": 9,
-"months": ['Jun', 'Jul', 'Aug', 'Sep']
+"months": ['Jun', 'Jul', 'Aug', 'Sep'],
+"rare": true
 },
 {"name": 'Great White Shark',
 "location": 'sea',
@@ -581,7 +651,8 @@ var fish = [
 "value": 15000,
 "start time": 16,
 "end time": 9,
-"months": ['Jun', 'Jul', 'Aug', 'Sep']
+"months": ['Jun', 'Jul', 'Aug', 'Sep'],
+"rare": true
 },
 {"name": 'Whale Shark',
 "location": 'sea',
@@ -589,7 +660,8 @@ var fish = [
 "value": 13000,
 "start time": 0,
 "end time": 0,
-"months": ['Jun', 'Jul', 'Aug', 'Sep']
+"months": ['Jun', 'Jul', 'Aug', 'Sep'],
+"rare": true
 },
 {"name": 'Suckerfish',
 "location": 'sea',
@@ -597,7 +669,8 @@ var fish = [
 "value": 1500,
 "start time": 0,
 "end time": 0,
-"months": ['Jun', 'Jul', 'Aug', 'Sep']
+"months": ['Jun', 'Jul', 'Aug', 'Sep'],
+"rare": false
 },
 {"name": 'Football Fish',
 "location": 'sea',
@@ -605,7 +678,8 @@ var fish = [
 "value": 2500,
 "start time": 16,
 "end time": 9,
-"months": ['Nov', 'Dec', 'Jan', 'Feb', 'Mar']
+"months": ['Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
+"rare": false
 },
 {"name": 'Oarfish',
 "location": 'sea',
@@ -613,7 +687,8 @@ var fish = [
 "value": 9000,
 "start time": 0,
 "end time": 0,
-"months": ['Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May']
+"months": ['Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May'],
+"rare": true
 },
 {"name": 'Barreleye',
 "location": 'sea',
@@ -621,7 +696,8 @@ var fish = [
 "value": 15000,
 "start time": 21,
 "end time": 4,
-"months": ['Year-round']
+"months": ['Year-round'],
+"rare": true
 }
 ]
 
@@ -633,7 +709,7 @@ fishFinder = function(fish){
     'location': null,
     'size': null
   };
-  var CommonValuable = {
+  var commonVal = {
     'name': null,
     'value': 0,
     'location': null,
@@ -647,27 +723,40 @@ fishFinder = function(fish){
       var startTime = entry['start time'];
       var endTime = entry['end time'];
       var months = entry['months'];
-      if (entry['value'] > valuable['value']){
         if (startTime > endTime){
           if (currentHour > startTime && currentHour < 24 || currentHour > 0 && currentHour < endTime){
             if (months.includes(currentMonth) || months === 'Year-round'){
+              if (entry['value'] > valuable['value']){
               valuable['name'] = entry['name'];
               valuable['value'] = entry['value'];
               valuable['location'] = entry['location'];
               valuable['size'] = entry['size'];
+              }
+            if (!entry['rare'] && entry['value'] > commonVal['value']){
+                commonVal['name'] = entry['name'];
+                commonVal['value'] = entry['value'];
+                commonVal['location'] = entry['location'];
+                commonVal['size'] = entry['size'];
+              }
             }
           }
           } else {
           if (currentHour > startTime && currentHour < endTime || startTime === endTime){
-            if (months.includes(currentMonth) || months === 'Year-round'){
+            if (entry['value'] > valuable['value']){
               valuable['name'] = entry['name'];
               valuable['value'] = entry['value'];
               valuable['location'] = entry['location'];
               valuable['size'] = entry['size'];
+              }
+            if (!entry['rare'] && entry['value'] > commonVal['value']){
+                commonVal['name'] = entry['name'];
+                commonVal['value'] = entry['value'];
+                commonVal['location'] = entry['location'];
+                commonVal['size'] = entry['size'];
+              }
             }
           }
         }
-      }
+        return [valuable, commonVal]
     }
-    return 'The most valuable fish currently available is the ' + valuable['name'] + ' with a value of ' + valuable['value'].toLocaleString() + ' bells. Its location is ' + valuable['location'] + ' and its shadow size is ' + valuable['size'] + '.'
-}
+

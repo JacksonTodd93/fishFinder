@@ -1,5 +1,6 @@
       h1 {
-        margin: 60px;
+        height: 50%;
+        width: 50%;
       }
       #greeting{
         color: white;
@@ -10,8 +11,9 @@
         padding: 15px;
         text-align: center;
       }
-      #fish {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      #intro {
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+         text-align: center;
          background-color: rgb(164, 204, 255);
          border-radius: 15px;
          width: 320px;
@@ -19,32 +21,20 @@
          border: 2px solid navy ;
          margin-left: 120px;
          margin-bottom: 20px;
+         white-space: pre-line; }
+
+      #fish {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+         background-color: rgb(164, 204, 255);
+         border-radius: 15px;
+         width: 380px;
+         padding: 9px;
+         border: 2px solid navy ;
+         margin-left: 100px;
+         margin-bottom: 20px;
          white-space: pre-line;
       }
-      form{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        padding: 9px;
-        margin-left: 10px;
-        margin-bottom: 10px;
-      }
-      #userTweet{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        background-color: rgb(164, 204, 255);
-        border-radius: 15px;
-        border: 3px solid navy ;
-        margin-left: 130px;
-        margin-bottom: 10px;
-        padding: 8px;
-        width: 320px;
-        text-align: center;
-      }
-      #error{
-        font-weight: normal;
-        color: red;
-        padding: 5px;
-        margin-left: 25px;
-        margin-bottom: 10px;
-      }
+
       span#welcome{
         color:white;
         font-weight: bold;
@@ -60,7 +50,7 @@
         padding: 15px 15px;
         font-size: 24px;
         margin-left: 230px;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         cursor: pointer;
         text-align: center;
         text-decoration: none;
@@ -104,14 +94,13 @@
         background-color: rgb(151, 215, 239);
         margin-right: 800px;
       }
-      aside {
-        float: right;
-        padding-left: 15px;
-        margin-left: 15px;
-      }
-      span#user{
-        color: blue;
-        text-decoration: underline;
+      div#time{
+        color: gray;
+        margin-left: 200px;
+        width: 250px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        font-weight: bold;
       }
       span {
         font-family: Verdana, Geneva, Tahoma, sans-serif;

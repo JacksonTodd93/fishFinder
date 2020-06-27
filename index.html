@@ -11,23 +11,41 @@
   $(document).ready(function() {
     var $body = $('body');
     $body.html('');
+    var $heading = $('<h1></h1>');
+    $heading.html("<img src=\"images/fishing.jpg\">").appendTo($body);
     var $greetingText = $('<h1 id="greeting"></h1>')
     var fishInfo = $('<div></div>');
-    fishInfo.html(`<div id="userTweet"><span id="welcome">Welcome to Fish Finder. </span> <span id="welcome">Let's go fishing!</span>
+    fishInfo.html(`<div id="intro"><span id="welcome">Welcome to Fish Finder. </span> <span id="welcome">Let's go fishing!</span>
 </div>`)
         fishInfo.appendTo($body)
-
-    var button = $('<div></div>')
-    button.html("<button class=\"button\">Search Again</button>")
-    button.appendTo($body)
-
-    button.on('click', fishDisplay());
-
+        fishDisplay()
     function fishDisplay(){
-      var valuable = fishFinder(fish);
-      var $valuable = $('<div id=\'fish\'></div>');
-      $valuable.text(valuable);
-      $valuable.appendTo($body)
+      var fishResults = fishFinder(fish);
+      var $mostValuable = $('<div id="fish"></div>');
+      var $commonValuable = $('<div id="fish"></div>');
+      var $timestamp = $('<div id="time"></div>');
+      var currentTime = new Date().toString()
+      var amOrPm = parseInt(currentTime.slice(16,18));
+      var minutes = currentTime.slice(18,21);
+      var timestamp
+        if (amOrPm >= 10 && amOrPm < 12) {
+            timestamp = '\n' + amOrPm + minutes + ' A.M.'
+        } else if (amOrPm > 0 && amOrPm < 10) {
+            timestamp = '\n' + amOrPm + minutes + ' A.M.'
+        } else if (amOrPm === 12) {
+            timestamp = '\n' + timestamp + minutes + ' P.M.'
+        } else if (amOrPm === 0) {
+            var midnightAdjustment = amOrPm + 12;
+            timestamp = '\n' + midnightAdjustment + minutes + ' A.M.'
+        } else {
+            var pmAdjustment = amOrPm - 12;
+            timestamp = '\n' + pmAdjustment + minutes + ' P.M.';
+        }
+        $timestamp.text('Last updated at ' + timestamp).appendTo($body);
+      var mostValuable = 'The most valuable fish currently available is ' + fishResults[0]['name'] + '. It is located in the ' + fishResults[0]['location'] + ' and has a ' + fishResults[0]['size'] + ' shadow. It is worth ' + fishResults[0]['value'].toLocaleString() + ' bells.';
+      var commonValuable = 'The most valuable non-rare fish currently available is ' + fishResults[1]['name'] + '. It is located in the ' + fishResults[1]['location'] + ' and has a ' + fishResults[1]['size'] + ' shadow. It is worth ' + fishResults[1]['value'].toLocaleString() + ' bells.' ;
+      $mostValuable.text(mostValuable).appendTo($body);
+      $commonValuable.text(commonValuable).appendTo($body);
     }
 });
     </script>
