@@ -724,7 +724,7 @@ fishFinder = function(fish){
       var endTime = entry['end time'];
       var months = entry['months'];
         if (startTime > endTime){
-          if (currentHour > startTime && currentHour < 24 || currentHour > 0 && currentHour < endTime){
+          if (currentHour > startTime && currentHour < 24 || currentHour >= 0 && currentHour < endTime){
             if (months.includes(currentMonth) || months === 'Year-round'){
               if (entry['value'] > valuable['value']){
               valuable['name'] = entry['name'];
