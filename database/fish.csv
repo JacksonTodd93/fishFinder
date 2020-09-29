@@ -1,0 +1,81 @@
+id,name,location,size,price,hours,months
+1,Bitterling,River,Smallest,900,yyyyyyyyyyyyyyyyyyyyyyyy,yyynnnnnnnyy
+2,Pale Chub,River,Smallest,160,nnnnnnnnnyyyyyyynnnnnnnn,yyyyyyyyyyyy
+3,Crucian Carp,River,Small,160,yyyyyyyyyyyyyyyyyyyyyyyy,yyyyyyyyyyyy
+4,Dace,River,Medium,240,yyyyyyyyynnnnnnnyyyyyyyy,yyyyyyyyyyyy
+5,Carp,Pond,Large,300,yyyyyyyyyyyyyyyyyyyyyyyy,yyyyyyyyyyyy
+6,Koi,Pond,Large,4000,yyyyyyyyynnnnnnnyyyyyyyy,yyyyyyyyyyyy
+7,Goldfish,Pond,Smallest,1300,yyyyyyyyyyyyyyyyyyyyyyyy,yyyyyyyyyyyy
+8,Pop-eyed Goldfish,Pond,Smallest,1300,nnnnnnnnnyyyyyyynnnnnnnn,yyyyyyyyyyyy
+9,Ranchu Goldfish,Pond,Small,4500,nnnnnnnnnyyyyyyynnnnnnnn,yyyyyyyyyyyy
+10,Killifish,Pond,Smallest,300,yyyyyyyyyyyyyyyyyyyyyyyy,nnnyyyyynnnn
+11,Crawfish,Pond,Small,200,yyyyyyyyyyyyyyyyyyyyyyyy,nnnyyyyyynnn
+12,Soft-shelled Turtle,River,Large,3750,yyyyyyyyynnnnnnnyyyyyyyy,nnnnnnnyynnn
+13,Snapping Turtle,River,X Large,5000,yyyynnnnnnnnnnnnnnnnnyyy,nnnyyyyyyynn
+14,Tadpole,Pond,Smallest,100,yyyyyyyyyyyyyyyyyyyyyyyy,nnyyyyynnnnn
+15,Frog,Pond,Small,120,yyyyyyyyyyyyyyyyyyyyyyyy,nnnnyyyynnnn
+16,Freshwater Goby,River,Small,400,yyyyyyyyynnnnnnnyyyyyyyy,yyyyyyyyyyyy
+17,Loach,River,Small,400,yyyyyyyyyyyyyyyyyyyyyyyy,nnyyynnnnnnn
+18,Catfish,Pond,Large,800,yyyyyyyyynnnnnnnyyyyyyyy,nnnnyyyyyynn
+19,Giant Snakehead,Pond,X Large,5500,nnnnnnnnnyyyyyyynnnnnnnn,nnnnnyyynnnn
+20,Bluegill,River,Small,180,nnnnnnnnnyyyyyyynnnnnnnn,yyyyyyyyyyyy
+21,Yellow Perch,River,Medium,300,yyyyyyyyyyyyyyyyyyyyyyyy,yyynnnnnnyyy
+22,Black Bass,River,Large,400,yyyyyyyyyyyyyyyyyyyyyyyy,yyyyyyyyyyyy
+23,Tilapia,River,Medium,800,yyyyyyyyyyyyyyyyyyyyyyyy,nnnnnyyyyynn
+24,Pike,River,X Large,1800,yyyyyyyyyyyyyyyyyyyyyyyy,nnnnnnnnyyyy
+25,Pond Smelt,River,Small,500,yyyyyyyyyyyyyyyyyyyyyyyy,yynnnnnnnnny
+26,Sweetfish,River,Medium,900,yyyyyyyyyyyyyyyyyyyyyyyy,nnnnnnyyynnn
+27,Cherry Salmon,River (Clifftop),Medium,1000,yyyyyyyyynnnnnnnyyyyyyyy,nnyyyynnyyyn
+28,Char,River (Clifftop),Medium,3800,yyyyyyyyynnnnnnnyyyyyyyy,nnyyyynnyyyn
+29,Golden Trout,River (Clifftop),Medium,15000,yyyyyyyyynnnnnnnyyyyyyyy,nnyyyynnyyyn
+30,Stringfish,River (Clifftop),Largest,15000,yyyyyyyyynnnnnnnyyyyyyyy,yyynnnnnnnny
+31,Salmon,River (mouth),Large,700,yyyyyyyyyyyyyyyyyyyyyyyy,nnnnnnnnynnn
+32,King Salmon,River (mouth),Largest,1800,yyyyyyyyyyyyyyyyyyyyyyyy,nnnnnnnnynnn
+33,Mitten Crab,River,Small,2000,yyyyyyyyynnnnnnnyyyyyyyy,nnnnnnnnyyyn
+34,Guppy,River,Smallest,1300,nnnnnnnnnyyyyyyynnnnnnnn,nnnyyyyyyyyn
+35,Nibble Fish,River,Small,1500,nnnnnnnnnyyyyyyynnnnnnnn,nnnnyyyyynnn
+36,Angelfish,River,Small,3000,yyyyyyyyynnnnnnnyyyyyyyy,nnnnnyyyyynn
+37,Betta,River,Small,2500,nnnnnnnnnyyyyyyynnnnnnnn,nnnnnyyyyynn
+38,Neon Tetra,River,Smallest,500,nnnnnnnnnyyyyyyynnnnnnnn,nnnyyyyyyyyn
+39,Rainbowfish,River,Small,800,nnnnnnnnnyyyyyyynnnnnnnn,nnnnyyyyyynn
+40,Piranha,River,Small,2500,yyyynnnnnyyyyyyynnnnnyyy,nnnnnyyyynnn
+41,Arowana,River,Large,10000,yyyyyyyyynnnnnnnyyyyyyyy,nnnnnyyyynnn
+42,Dorado,River,X Large,15000,nnnnyyyyyyyyyyyyyyyyynnn,nnnnnyyyynnn
+43,Gar,Pond,Largest,6000,yyyyyyyyynnnnnnnyyyyyyyy,nnnnnyyyynnn
+44,Arapaima,River,Largest,10000,yyyyyyyyynnnnnnnyyyyyyyy,nnnnnyyyynnn
+45,Saddled Bichir,River,Large,4000,yyyynnnnnnnnnnnnnnnnnyyy,nnnnnyyyynnn
+46,Sturgeon,River (mouth),Largest,10000,yyyyyyyyyyyyyyyyyyyyyyyy,yyynnnnnyyyy
+47,Sea Butterfly,Sea,Smallest,1000,yyyyyyyyyyyyyyyyyyyyyyyy,yyynnnnnnnny
+48,Sea Horse,Sea,Smallest,1100,yyyyyyyyyyyyyyyyyyyyyyyy,nnnyyyyyyyyn
+49,Clown Fish,Sea,Smallest,650,yyyyyyyyyyyyyyyyyyyyyyyy,nnnyyyyyynnn
+50,Surgeonfish,Sea,Small,1000,yyyyyyyyyyyyyyyyyyyyyyyy,nnnyyyyyynnn
+51,Butterfly Fish,Sea,Small,1000,yyyyyyyyyyyyyyyyyyyyyyyy,nnnyyyyyynnn
+52,Napoleonfish,Sea,Largest,10000,nnnnyyyyyyyyyyyyyyyyynnn,nnnnnnyynnnn
+53,Zebra Turkeyfish,Sea,Medium,500,yyyyyyyyyyyyyyyyyyyyyyyy,nnnyyyyyyyyn
+54,Blowfish,Sea,Medium,5000,yyyynnnnnnnnnnnnnnyyyyyy,yynnnnnnnnyy
+55,Puffer Fish,Sea,Medium,250,yyyyyyyyyyyyyyyyyyyyyyyy,nnnnnnyyynnn
+56,Anchovy,Sea,Small,200,nnnnyyyyyyyyyyyyyyyyynnn,yyyyyyyyyyyy
+57,Horse Mackerel,Sea,Small,150,yyyyyyyyyyyyyyyyyyyyyyyy,yyyyyyyyyyyy
+58,Barred Knifejaw,Sea,Medium,5000,yyyyyyyyyyyyyyyyyyyyyyyy,nnyyyyyyyyyn
+59,Sea Bass,Sea,X Large,400,yyyyyyyyyyyyyyyyyyyyyyyy,yyyyyyyyyyyy
+60,Red Snapper,Sea,Large,3000,yyyyyyyyyyyyyyyyyyyyyyyy,yyyyyyyyyyyy
+61,Dab,Sea,Medium,300,yyyyyyyyyyyyyyyyyyyyyyyy,yyyynnnnnyyy
+62,Olive Flounder,Sea,Large,800,yyyyyyyyyyyyyyyyyyyyyyyy,yyyyyyyyyyyy
+63,Squid,Sea,Medium,500,yyyyyyyyyyyyyyyyyyyyyyyy,yyyyyyyynnny
+64,Moray Eel,Sea,Narrow,2000,yyyyyyyyyyyyyyyyyyyyyyyy,nnnnnnnyyynn
+65,Ribbon Eel,Sea,Narrow,600,yyyyyyyyyyyyyyyyyyyyyyyy,nnnnnyyyyynn
+66,Tuna,Pier,Largest,7000,yyyyyyyyyyyyyyyyyyyyyyyy,yyyynnnnnnyy
+67,Blue Marlin,Pier,Largest,10000,yyyyyyyyyyyyyyyyyyyyyyyy,yyyynnyyynyy
+68,Giant Trevally,Pier,Large,4500,yyyyyyyyyyyyyyyyyyyyyyyy,nnnnyyyyyynn
+69,Mahi-mahi,Sea,Large,6000,yyyyyyyyyyyyyyyyyyyyyyyy,nnnnyyyyyynn
+70,Ocean Sunfish,Sea,Largest (Fin),4000,nnnnyyyyyyyyyyyyyyyyynnn,nnnnnnyyynnn
+71,Ray,Sea,X Large,3000,nnnnyyyyyyyyyyyyyyyyynnn,nnnnnnnyyyyn
+72,Saw Shark,Sea,Largest (Fin),12000,yyyyyyyyynnnnnnnyyyyyyyy,nnnnnyyyynnn
+73,Hammerhead Shark,Sea,Largest (Fin),8000,yyyyyyyyynnnnnnnyyyyyyyy,nnnnnyyyynnn
+74,Great White Shark,Sea,Largest (Fin),15000,yyyyyyyyynnnnnnnyyyyyyyy,nnnnnyyyynnn
+75,Whale Shark,Sea,Largest (Fin),13000,yyyyyyyyyyyyyyyyyyyyyyyy,nnnnnyyyynnn
+76,Suckerfish,Sea,Large (Fin),1500,yyyyyyyyyyyyyyyyyyyyyyyy,nnnnnyyyynnn
+77,Football Fish,Sea,Large,2500,yyyyyyyyynnnnnnnyyyyyyyy,yyynnnnnnnyy
+78,Oarfish,Sea,Largest,9000,yyyyyyyyyyyyyyyyyyyyyyyy,yyyyynnnnnny
+79,Barreleye,Sea,Small,15000,yyyynnnnnnnnnnnnnnnnnyyy,yyyyyyyyyyyy
+80,Coelacanth,Sea,Largest,15000,yyyyyyyyyyyyyyyyyyyyyyyy,yyyyyyyyyyyy
