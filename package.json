@@ -4,7 +4,8 @@
   "description": "A companion app for Animal Crossing: New Horizons",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",

@@ -5,7 +5,8 @@ class UserSelect extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formEntry: ''
+      usernameEntry: '',
+      passwordEntry: '',
     }
   }
 
@@ -15,14 +16,14 @@ class UserSelect extends React.Component {
 
   handleInput(event) {
     this.setState({
-      formEntry: event.target.value
+      usernameEntry: event.target.value
     });
   }
 
   createNewUser() {
-    this.props.createNewUser(this.state.formEntry);
+    this.props.createNewUser(this.state.usernameEntry);
     this.setState({
-      formEntry: ''
+      usernameEntry: ''
     })
   }
 
@@ -39,7 +40,7 @@ class UserSelect extends React.Component {
         </select>
         <div>
           <label for="input">Register a New User:</label>
-          <input name="input" type="text" value={this.state.formEntry} onChange={this.handleInput.bind(this)}></input>
+          <input name="input" type="text" value={this.state.usernameEntry} onChange={this.handleInput.bind(this)}></input>
           <button onClick={this.createNewUser.bind(this)}>Register</button>
         </div>
       </div>

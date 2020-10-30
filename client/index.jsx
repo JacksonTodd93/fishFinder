@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import $ from 'jquery';
 
 import FishGrid from './FishGrid.jsx';
-import UserSelect from './UserSelect.jsx';
+import SignInForm from './SignInForm.jsx';
 import DisplayMessage from './DisplayMessage.jsx';
 
 const Background = styled.div`
@@ -19,7 +19,9 @@ class App extends React.Component {
       targetFish: {},
       allFish: [],
       allUsers: [],
-      nextAvailable: {}
+      nextAvailable: {},
+      hemisphere: 'northern',
+      authenticated: false,
     }
   }
 
@@ -207,26 +209,25 @@ class App extends React.Component {
 
 
   render() {
-    return (
-      <Background>
-        <div>
-          <UserSelect
-            allUsers={this.state.allUsers}
-            fetchUser={this.fetchUser.bind(this)}
-            createNewUser={this.createNewUser.bind(this)}> </UserSelect>
-        </div>
-        <div>
-          <DisplayMessage
-            targetFish={this.state.targetFish}
-            nextAvailable={this.state.nextAvailable}
-          ></DisplayMessage>
-        </div>
-        <div>
-          <FishGrid updateFishEntry={this.updateFishEntry.bind(this)} fishArray={this.state.allFish}>
+    if (this.state.authenticated) {
+      return (
+        <Background>
+          <div>
+          </div>
+          <div>
+            <DisplayMessage
+              targetFish={this.state.targetFish}
+              nextAvailable={this.state.nextAvailable}
+            ></DisplayMessage>
+          </div>
+          <div>
+            <FishGrid updateFishEntry={this.updateFishEntry.bind(this)} fishArray={this.state.allFish}>
 
-          </FishGrid>
-        </div>
-      </Background>)
+            </FishGrid>
+          </div>
+        </Background>)
+    }
+    return <SignInForm> </SignInForm>
   }
 }
 
