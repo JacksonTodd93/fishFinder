@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS fish (
   PRIMARY KEY (id)
 );
 
-LOAD DATA LOCAL INFILE '/Users/jackson/repos/HRR47/hrr47-mvp/database/fish.csv'
+LOAD DATA LOCAL INFILE '/Users/jackson/repos/fishFinder/database/fish.csv'
 INTO TABLE fish
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
@@ -105,5 +105,10 @@ CREATE TABLE IF NOT EXISTS users (
   fish80 BOOLEAN DEFAULT false,
   PRIMARY KEY (id)
 );
+
+ CREATE TABLE IF NOT EXISTS sessions (
+          id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+          hash VARCHAR(64),
+          userId INT);
 
 INSERT INTO USERS (name) VALUES ('default');

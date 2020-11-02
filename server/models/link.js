@@ -1,7 +1,7 @@
 const crypto = require('crypto');
 const Promise = require('bluebird');
 const request = Promise.promisify(require('request'), { multiArgs: true });
-const Model = require('./model');
+const Model = require('./model.js');
 
 /**
  * Links is a class with methods to interact with the links table, which
@@ -28,7 +28,7 @@ class Links extends Model {
       let match = response.body.match(tag);
       let title = match ? match[1] : url;
       return title;
-    }); 
+    });
   }
 
   /**

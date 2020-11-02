@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const Auth = require('./middleware/auth.js');
 const bodyParser = require('body-parser');
 const db = require('../database');
 
@@ -12,6 +13,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('client'));
+
+app.get('/', Auth.verifySession,
+  (req, res) => {
+    res.render('index');
+  });
 
 app.get('/api/fish', (req, res) => {
   const fishString = `SELECT id, name, location, hours, months FROM fish`;
