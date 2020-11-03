@@ -53,7 +53,9 @@ module.exports.verifySession = function (req, res, next) {
   models.Sessions.get({ hash: req.session.hash })
     .then((sessionTableRow) => {
       if (sessionTableRow.userId === null) {
-        res.redirect('login');
+        res.send({
+          auth: false
+        });
         return;
       } else {
         next();

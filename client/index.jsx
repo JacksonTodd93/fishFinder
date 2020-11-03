@@ -125,7 +125,7 @@ class App extends React.Component {
     $.ajax(options);
   }
 
-  fetchUser(userName) {
+  login(username) {
     const options = {
       method: 'get',
       url: '/api/users',
@@ -140,12 +140,12 @@ class App extends React.Component {
         }
         this.setState({
           allFish: fishArray,
-          name: userName
+          name: username
         })
         this.findTargetFish(this.state.allFish);
       },
       data: {
-        name: userName
+        name: username
       }
     }
     $.ajax(options);
@@ -183,12 +183,13 @@ class App extends React.Component {
     $.ajax(options);
   }
 
-  createNewUser(newName) {
+  createNewUser(newName, pw) {
     const options = {
       method: 'post',
-      url: '/api/users',
+      url: '/signup',
       data: {
-        name: newName
+        name: newName,
+        password: pw,
       },
       failure: () => {
         console.log('Account not created');
@@ -202,8 +203,6 @@ class App extends React.Component {
 
   componentDidMount() {
     this.fetchFish();
-    this.fetchAllUsers();
-    this.fetchUser(this.state.name);
   }
 
 
@@ -227,7 +226,7 @@ class App extends React.Component {
           </div>
         </Background>)
     }
-    return <SignInForm> </SignInForm>
+    return <SignInForm createNewUser={this.createNewUser.bind(this)}> </SignInForm>
   }
 }
 

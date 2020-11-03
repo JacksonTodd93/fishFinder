@@ -11,19 +11,15 @@ class SignInForm extends React.Component {
     }
   }
 
-  handleSelect(event) {
-    this.props.fetchUser(event.target.value);
-  }
-
-  handleUsername(event) {
+  handleUsername(user) {
     this.setState({
-      usernameEntry: event.target.value
+      usernameEntry: user.target.value
     });
   }
 
-  handlePassword(event) {
+  handlePassword(pw) {
     this.setState({
-      passwordEntry: event.target.value
+      passwordEntry: pw.target.value
     });
   }
 
@@ -76,7 +72,7 @@ class SignInForm extends React.Component {
           <label for="username">Username:</label>
           <input name="username" type="text" value={this.state.usernameEntry} onChange={this.handleUsername.bind(this)}></input>
           <label for="password">Password:</label>
-          <input name="password" type="text" value={this.state.usernameEntry} onChange={this.handlePassword.bind(this)}></input>
+          <input name="password" type="text" value={this.state.passwordEntry} onChange={this.handlePassword.bind(this)}></input>
           <button onClick={this.createNewUser.bind(this)}>Register</button>
           <div>
             Already have an account?
