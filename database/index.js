@@ -1,16 +1,17 @@
 const mysql = require('mysql');
+const Promise = require('bluebird');
 
-var dbConnection = mysql.createConnection({
+
+const dbConnection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   database: 'fishFinder',
 });
 
-dbConnection.connect((err) => {
-  if (err) {
-    console.log(err);
-  }
-  console.log('Database connected');
-});
+const db = Promise.promisifyAll(dbConnection, {multiArgs: true});
 
-module.exports.dbConnection = dbConnection;
+db.connectAsync()
+  .then(() => console.log('Database connected'))
+  .catch((err) => console.log(err));
+
+module.exports = db;

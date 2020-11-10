@@ -22,7 +22,14 @@ IGNORE 1 ROWS;
 
 CREATE TABLE IF NOT EXISTS users (
   id INT AUTO_INCREMENT,
-  name VARCHAR(20),
+  username VARCHAR(20),
+  password VARCHAR(64),
+  salt VARCHAR(64),
+  PRIMARY KEY (id)
+);
+CREATE TABLE IF NOT EXISTS userFish(
+  id INT AUTO_INCREMENT,
+  userID INT,
   fish1 BOOLEAN DEFAULT false,
   fish2 BOOLEAN DEFAULT false,
   fish3 BOOLEAN DEFAULT false,
@@ -103,12 +110,11 @@ CREATE TABLE IF NOT EXISTS users (
   fish78 BOOLEAN DEFAULT false,
   fish79 BOOLEAN DEFAULT false,
   fish80 BOOLEAN DEFAULT false,
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
+  FOREIGN KEY (userID) references Users(id)
 );
 
  CREATE TABLE IF NOT EXISTS sessions (
           id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
           hash VARCHAR(64),
           userId INT);
-
-INSERT INTO USERS (name) VALUES ('default');

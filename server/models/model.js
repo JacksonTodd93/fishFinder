@@ -1,4 +1,4 @@
-const db = require('../../database');
+const db = require('../../database/index.js');
 const _ = require('lodash');
 
 const executeQuery = (query, values) => {

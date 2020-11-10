@@ -202,7 +202,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.fetchFish();
+    // this.fetchFish();
   }
 
 

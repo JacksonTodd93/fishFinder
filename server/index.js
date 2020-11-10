@@ -23,17 +23,17 @@ app.get('/', Auth.verifySession,
     });
   });
 
-app.get('/api/fish', (req, res) => {
-  const fishString = `SELECT id, name, location, hours, months FROM fish`;
-  db.dbConnection.query(fishString, (err, fishList) => {
-    if (err) {
-      console.log(err);
-      res.statusCode(500);
-      return;
-    }
-    res.send(fishList);
-  })
-});
+// app.get('/api/fish', (req, res) => {
+//   const fishString = `SELECT id, name, location, hours, months FROM fish`;
+//   db.query(AsyncfishString, (err, fishList) => {
+//     if (err) {
+//       console.log(err);
+//       res.statusCode(500);
+//       return;
+//     }
+//     res.send(fishList);
+//   })
+// });
 
 app.get('/api/allusers', (req, res) => {
   const userString = `SELECT name FROM users`;
